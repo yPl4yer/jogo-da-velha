@@ -1,0 +1,487 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/* BODDY */
+
+body {
+  
+    background-color: rgb(19, 13, 58);
+    background-image: url('https://i.imgur.com/LGeAhv8.jpg');
+    color: #b6b5ca;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    text-align: center;
+
+}
+
+h1 {
+
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 64px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+
+}
+
+h5 {
+
+    font-weight: 400;
+    padding: 0 20px;
+
+}
+
+/* JOGO DA VELHA */
+
+.jogo-da-velha {
+
+    font-family: "Josefin Sans", sans-serif;
+    height: 300px;
+    overflow: hidden;
+    margin: 50px auto 30px auto;
+    position: relative;
+    width: 300px;
+
+}
+
+@media (min-width: 450px) {
+
+    .jogo-da-velha {
+
+      height: 450px;
+      width: 450px;
+
+    }
+
+}
+
+.jogo-da-velha input[type="radio"] {
+
+    display: none;
+
+}
+
+.jogo-da-velha input[type="radio"]:checked + label {
+
+    cursor: default;
+    z-index: 10 !important;
+
+}
+
+.jogo-da-velha input[type="radio"].player-1 + label:after {
+
+    content: "O";
+
+}
+
+.jogo-da-velha input[type="radio"].player-2 + label:after {
+  
+    content: "X";
+
+}
+
+.jogo-da-velha input[type="radio"].player-1:checked + label:after, .jogo-da-velha input[type="radio"].player-2:checked + label:after {
+  
+    opacity: 1;
+
+}
+
+.jogo-da-velha input[type="radio"].player-1:checked + label {
+
+    background-color: #ff1900;
+
+}
+
+.jogo-da-velha input[type="radio"].player-2:checked + label {
+
+    background-color: #4fec64;
+
+}
+
+.jogo-da-velha input[type="radio"].turn-1 + label {
+
+    z-index: 1;
+
+}
+
+.jogo-da-velha input[type="radio"].turn-2 + label {
+
+    z-index: 2;
+
+}
+
+.jogo-da-velha input[type="radio"].turn-3 + label {
+
+    z-index: 3;
+
+}
+
+.jogo-da-velha input[type="radio"].turn-4 + label {
+
+   z-index: 4;
+
+}
+
+.jogo-da-velha input[type="radio"].turn-5 + label {
+
+   z-index: 5;
+
+}
+
+.jogo-da-velha input[type="radio"].turn-6 + label {
+
+    z-index: 6;
+
+}
+
+.jogo-da-velha input[type="radio"].turn-7 + label {
+
+    z-index: 7;
+
+}
+
+.jogo-da-velha input[type="radio"].turn-8 + label {
+
+    z-index: 8;
+
+}
+
+.jogo-da-velha input[type="radio"].turn-9 + label {
+
+    z-index: 9;
+
+}
+
+.jogo-da-velha input[type="radio"].turn-1 + label {
+
+    display: block;
+
+}
+
+.jogo-da-velha input[type="radio"].turn-1:checked ~ .turn-2 + label {
+
+    display: block;
+
+}
+
+.jogo-da-velha input[type="radio"].turn-2:checked ~ .turn-3 + label {
+
+    display: block;
+
+}
+
+.jogo-da-velha input[type="radio"].turn-3:checked ~ .turn-4 + label {
+
+    display: block;
+
+}
+
+.jogo-da-velha input[type="radio"].turn-4:checked ~ .turn-5 + label {
+
+    display: block;
+
+}
+
+.jogo-da-velha input[type="radio"].turn-5:checked ~ .turn-6 + label {
+
+    display: block;
+
+}
+
+.jogo-da-velha input[type="radio"].turn-6:checked ~ .turn-7 + label {
+
+    display: block;
+
+}
+
+.jogo-da-velha input[type="radio"].turn-7:checked ~ .turn-8 + label {
+
+    display: block;
+
+}
+
+.jogo-da-velha input[type="radio"].turn-8:checked ~ .turn-9 + label {
+
+    display: block;
+
+}
+
+.jogo-da-velha input[type="radio"].left + label {
+
+    left: 0;
+
+}
+
+.jogo-da-velha input[type="radio"].top + label {
+
+    top: 0;
+
+}
+
+.jogo-da-velha input[type="radio"].middle + label {
+
+    left: 100px;
+
+}
+
+.jogo-da-velha input[type="radio"].right + label {
+
+    left: 200px;
+
+}
+
+.jogo-da-velha input[type="radio"].center + label {
+
+    top: 100px;
+}
+
+.jogo-da-velha input[type="radio"].bottom + label {
+
+    top: 200px;
+
+}
+
+@media (min-width: 450px) {
+
+  .jogo-da-velha input[type="radio"].middle + label {
+
+    left: 150px;
+
+  }
+
+  .jogo-da-velha input[type="radio"].right + label {
+
+    left: 300px;
+
+  }
+
+  .jogo-da-velha input[type="radio"].center + label {
+
+    top: 150px;
+
+  }
+
+  .jogo-da-velha input[type="radio"].bottom + label {
+
+    top: 300px;
+
+  }
+
+}
+
+.jogo-da-velha input[type="radio"]:checked ~ input[type="radio"]:checked ~ input[type="radio"]:checked ~
+input[type="radio"]:checked ~ input[type="radio"]:checked ~ input[type="radio"]:checked ~
+input[type="radio"]:checked ~ input[type="radio"]:checked ~ input[type="radio"]:checked ~ .end {
+    
+    display: block;
+
+}
+
+.jogo-da-velha input[type="radio"]:checked ~ input[type="radio"]:checked ~ input[type="radio"]:checked ~
+input[type="radio"]:checked ~ input[type="radio"]:checked ~ input[type="radio"]:checked ~
+input[type="radio"]:checked ~ input[type="radio"]:checked ~ input[type="radio"]:checked ~ .end > h3:before {
+    
+    content: "It is a tie!";
+
+}
+
+.jogo-da-velha .player-1.first-column:checked ~ .player-1.first-column:checked ~ .player-1.first-column:checked ~ .end,
+.jogo-da-velha .player-1.second-column:checked ~ .player-1.second-column:checked ~ .player-1.second-column:checked ~ .end,
+.jogo-da-velha .player-1.third-column:checked ~ .player-1.third-column:checked ~ .player-1.third-column:checked ~ .end,
+.jogo-da-velha .player-1.first-row:checked ~ .player-1.first-row:checked ~ .player-1.first-row:checked ~ .end,
+.jogo-da-velha .player-1.second-row:checked ~ .player-1.second-row:checked ~ .player-1.second-row:checked ~ .end,
+.jogo-da-velha .player-1.third-row:checked ~ .player-1.third-row:checked ~ .player-1.third-row:checked ~ .end,
+.jogo-da-velha .player-1.first-diagonal:checked ~ .player-1.first-diagonal:checked ~ .player-1.first-diagonal:checked ~ .end,
+.jogo-da-velha .player-1.second-diagonal:checked ~ .player-1.second-diagonal:checked ~ .player-1.second-diagonal:checked ~ .end {
+    
+    display: block;
+
+}
+
+.jogo-da-velha .player-1.first-column:checked ~ .player-1.first-column:checked ~ .player-1.first-column:checked ~ .end h3:before,
+.jogo-da-velha .player-1.second-column:checked ~ .player-1.second-column:checked ~ .player-1.second-column:checked ~ .end h3:before,
+.jogo-da-velha .player-1.third-column:checked ~ .player-1.third-column:checked ~ .player-1.third-column:checked ~ .end h3:before,
+.jogo-da-velha .player-1.first-row:checked ~ .player-1.first-row:checked ~ .player-1.first-row:checked ~ .end h3:before,
+.jogo-da-velha .player-1.second-row:checked ~ .player-1.second-row:checked ~ .player-1.second-row:checked ~ .end h3:before,
+.jogo-da-velha .player-1.third-row:checked ~ .player-1.third-row:checked ~ .player-1.third-row:checked ~ .end h3:before,
+.jogo-da-velha .player-1.first-diagonal:checked ~ .player-1.first-diagonal:checked ~ .player-1.first-diagonal:checked ~ .end h3:before,
+.jogo-da-velha .player-1.second-diagonal:checked ~ .player-1.second-diagonal:checked ~ .player-1.second-diagonal:checked ~ .end h3:before {
+    
+    content: "Jogador 1 ganhou!" !important;
+
+}
+
+.jogo-da-velha .player-2.first-column:checked ~ .player-2.first-column:checked ~ .player-2.first-column:checked ~ .end,
+.jogo-da-velha .player-2.second-column:checked ~ .player-2.second-column:checked ~ .player-2.second-column:checked ~ .end,
+.jogo-da-velha .player-2.third-column:checked ~ .player-2.third-column:checked ~ .player-2.third-column:checked ~ .end,
+.jogo-da-velha .player-2.first-row:checked ~ .player-2.first-row:checked ~ .player-2.first-row:checked ~ .end,
+.jogo-da-velha .player-2.second-row:checked ~ .player-2.second-row:checked ~ .player-2.second-row:checked ~ .end,
+.jogo-da-velha .player-2.third-row:checked ~ .player-2.third-row:checked ~ .player-2.third-row:checked ~ .end,
+.jogo-da-velha .player-2.first-diagonal:checked ~ .player-2.first-diagonal:checked ~ .player-2.first-diagonal:checked ~ .end,
+.jogo-da-velha .player-2.second-diagonal:checked ~ .player-2.second-diagonal:checked ~ .player-2.second-diagonal:checked ~ .end {
+    display: block;
+
+}
+
+.jogo-da-velha .player-2.first-column:checked ~ .player-2.first-column:checked ~ .player-2.first-column:checked ~ .end h3:before,
+.jogo-da-velha .player-2.second-column:checked ~ .player-2.second-column:checked ~ .player-2.second-column:checked ~ .end h3:before,
+.jogo-da-velha .player-2.third-column:checked ~ .player-2.third-column:checked ~ .player-2.third-column:checked ~ .end h3:before,
+.jogo-da-velha .player-2.first-row:checked ~ .player-2.first-row:checked ~ .player-2.first-row:checked ~ .end h3:before,
+.jogo-da-velha .player-2.second-row:checked ~ .player-2.second-row:checked ~ .player-2.second-row:checked ~ .end h3:before,
+.jogo-da-velha .player-2.third-row:checked ~ .player-2.third-row:checked ~ .player-2.third-row:checked ~ .end h3:before,
+.jogo-da-velha .player-2.first-diagonal:checked ~ .player-2.first-diagonal:checked ~ .player-2.first-diagonal:checked ~ .end h3:before,
+.jogo-da-velha .player-2.second-diagonal:checked ~ .player-2.second-diagonal:checked ~ .player-2.second-diagonal:checked ~ .end h3:before {
+    
+    content: "Jogador 2 ganhou!" !important;
+
+}
+
+.jogo-da-velha label {
+
+    background-color: blueviolet;
+    border-radius: 14px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+    height: 90px;
+    margin: 5px;
+    position: absolute;
+    width: 90px;
+    -moz-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+
+}
+@media (min-width: 450px) {
+
+    .jogo-da-velha label {
+
+      height: 140px;
+      width: 140px;
+
+    }
+
+}
+.jogo-da-velha label:hover {
+
+    background-color: #3d4250;
+
+}
+.jogo-da-velha label:hover:after {
+
+    opacity: .4;
+  
+}
+.jogo-da-velha label:after {
+
+    left: 0;
+    font-family: "FontAwesome";
+    font-size: 45px;
+    margin-top: -22.5px;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    top: 50%;
+    width: 100%;
+
+}
+@media (min-width: 450px) {
+
+    .jogo-da-velha label:after {
+
+      font-size: 70px;
+      margin-top: -35px;
+
+    }
+
+}
+.jogo-da-velha .end {
+
+    background: rgba(255, 255, 255, 0.8);
+    bottom: 5px;
+    color: #3d4250;
+    display: none;
+    left: 5px;
+    padding-top: 55px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    text-align: center;
+    z-index: 11;
+
+}
+@media (min-width: 450px) {
+
+    .jogo-da-velha .end {
+      padding-top: 110px;
+    }
+
+}
+.jogo-da-velha .end h3 {
+
+    font-size: 30px;
+    font-weight: 300;
+
+}
+@media (min-width: 450px) {
+
+    .jogo-da-velha .end h3 {
+
+      font-size: 40px;
+
+    }
+
+}
+.jogo-da-velha .end a {
+
+    background-color: #3d4250;
+    border-radius: 4px;
+    color: #fff;
+    padding: 14px 45px;
+    text-decoration: none;
+    -moz-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+
+}
+.jogo-da-velha .end a:hover {
+
+    background-color: #262934;
+    cursor: pointer;
+
+}
+
+
+/* FOOTER */
+
+footer {
+
+  margin-top: 105px;
+  background-color: transparent;
+  clear: both;
+  padding: 28px;         
+  font-size: 15px;
+  font-family: "arial", sans-serif;
+  object-fit: scale-down;
+  margin-bottom: 0;
+  text-align: center;
+  height: 75px;
+
+}
+
+.icones {
+  
+  list-style: none;
+  clear: both;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  border: 0;
+  position: relative;
+  left: -1%;
+  gap: 15px;
+  
+}
