@@ -281,7 +281,7 @@ input[type="radio"]:checked ~ input[type="radio"]:checked ~ input[type="radio"]:
 input[type="radio"]:checked ~ input[type="radio"]:checked ~ input[type="radio"]:checked ~
 input[type="radio"]:checked ~ input[type="radio"]:checked ~ input[type="radio"]:checked ~ .end > h3:before {
     
-    content: "It is a tie!";
+    content: "Deu empateeee!";
 
 }
 
